@@ -1,0 +1,13 @@
+---
+composer_path: /usr/local/bin/composer
+composer_keep_updated: false
+
+composer_home_path: '~/.composer'
+composer_home_owner: root
+composer_home_group: root
+
+# We can use Drush 8.x since we're upgrading to PHP 5.4.5+
+drush_version: "8.1.17"
+drush_phar_url: https://github.com/drush-ops/drush/releases/download/{{ drush_version }}/drush.phar
+drush_path: /usr/local/bin/drush
+
