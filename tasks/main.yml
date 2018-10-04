@@ -1,0 +1,6 @@
+---
+
+- name: Install composer
+  include_tasks: composer.yml
+  include_tasks: drush.yml
+
