@@ -2,5 +2,7 @@
 
 - name: Install composer
   include_tasks: composer.yml
+
+- name: Install drush
   include_tasks: drush.yml
 
