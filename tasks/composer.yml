@@ -4,7 +4,7 @@
 
 - name: Check if Composer is installed.
   stat:
-    path={{ composer_path }}
+    path: "{{ composer_path }}"
   register: composer_bin
 
 - name: Download Composer installer.
@@ -17,13 +17,15 @@
 - name: Run Composer installer.
   command: >
     php composer-installer.php
-    chdir=/tmp
+  args:
+    chdir: "/tmp"
   when: not composer_bin.stat.exists
 
 - name: Move Composer into globally-accessible location.
   shell: >
     mv /tmp/composer.phar {{ composer_path }}
-    creates={{ composer_path }}
+  args:
+    creates: "{{ composer_path }}"
   when: not composer_bin.stat.exists
 
 - name: Ensure composer directory exists.
