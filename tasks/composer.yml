@@ -3,7 +3,7 @@
 ---
 
 - name: Check if Composer is installed.
-  stat: 
+  stat:
     path={{ composer_path }}
   register: composer_bin
 
@@ -16,7 +16,7 @@
 
 - name: Run Composer installer.
   command: >
-    /usr/bin/php composer-installer.php
+    php composer-installer.php
     chdir=/tmp
   when: not composer_bin.stat.exists
 
