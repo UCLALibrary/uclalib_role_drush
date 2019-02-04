@@ -15,7 +15,7 @@
   when: not composer_bin.stat.exists
 
 - name: Run Composer installer.
-  command: >
+  shell: >
     php composer-installer.php
   args:
     chdir: "/tmp"
