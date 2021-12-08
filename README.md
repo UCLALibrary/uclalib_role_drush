@@ -2,6 +2,8 @@
 
 Ansible role to install Drush (and Composer).
 
+**This role is no longer maintaned and the repo is archived**
+
 ## Requirements
 
 PHP 5.4.5 or later, to support Drush 8.
